@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(img/bkgd_page.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*header*/
+.logo {
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+/*WARNING : préférer les flottements ou équivalent  pour le logo et la navigation*/
+/*menu*/
+.menu ul {
+    position: absolute;
+    top: 80px;
+    right: 150px;
+}
+
+
+.menu li {
+    float: left;
+    list-style: none;
+
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 25px;
+    color: #fff;
+    border: 1px dashed white;
+ /*  WARNING : attention vos bordures sont doublées, 
+  on n'a besoin que d'une bordure gauche ou droite supplémentaire
+  sur l'ensemble des items*/
+     
+    border-collapse: collapse;
+}
+
+.menu a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*Gros titre*/
+.title-big {
+    text-align: center;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title-big h1 {
+    font-size: 75px;
+}
+
+.title-big h2 {
+    font-size: 40px;
+}
+
+.title-big p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/*Conteneur principal*/
+main {
+    width: 1024px;
+    /*WARNING : non sur div#wrapper que l'on centrer avec mmargin:0 auto;*/
+    background-color: #f6f6f6;
+    margin: 50px auto;
+    padding: 50px 0;
+}
+
+/*Première partie*/
+#first {
+    margin: 0 20px;
+}
+
+.first-line, .second-line {
+    overflow: hidden;
+}
+/*WARNING : c'est donc quu'une seule classe */
+.top, .second {
+    float: left;
+    padding: 15px 0;
+}
+
+.top {
+    text-align: justify;
+}
+
+.picture {
+    position: relative;
+}
+
+#first figcaption
+/*WARNING : non opacity:0.5 sur img:hover*/
+ {
+    height: 272px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#first figcaption:hover {
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+.text {
+    width: 350px;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+span {
+    color: #38b4b4;
+}
+
+em {
+    color: #aaa;
+}
+
+.auteur {
+    margin: 10px 0;
+}
+
+.product {
+    margin-left: 5%;
+}
+
+a[title="Télécharger"] {
+    margin-left: 40px;
+}
+
+a[title="Télécharger"], [title="Consulter"] {
+    color: #a22755;
+    font-size: 15px;
+    text-decoration: none;
+}
+/*WARNING : c'est plus simple en utilisant des classes*/
+a[title="Télécharger"]:hover, [title="Consulter"]:hover {
+    background-color: #ccc;
+}
+
+/*Deuxième partie*/
+#second {
+    margin: 100px 20px 0;
+    position: relative;
+}
+
+.left {
+    width: 480px;
+    height: 480px;
+    border: 1px solid #000;
+}
+
+#second figcaption {
+    width: 479px;
+    height: 479px;
+    background-color: rgba(0, 0, 0, 0.432);
+    border: 1px solid #000;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#second figure:hover figcaption {
+    display: block;
+}
+
+.title-margin {
+    font-size: 30px;
+    margin-top: 35%;
+}
+
+button
+/*WARNING : mauvaise balise html*/
+ {
+    margin: 30px auto;
+    display: block;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background-color: #0c7f06;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #ccc;
+}
+
+.right {
+    width: 480px;
+    position: absolute;
+    /*WARNING : flottement ou équivalent*/
+    top: 0;
+    right: -20px;
+}
+
+.vignette {
+    padding: 16px 50px ;
+    float: left;
+    background-color: #ddeae4;
+    border: 5px solid #305a47;
+    border-collapse: collapse;
+}
+
+h4 {
+    text-align: center;
+}
+
+a[title="Consulter"] {
+    margin-left: 30px;
+}
+
+/*Formulaire*/
+#formulaire {
+    width: 975px;
+    min-height: 100px;
+    margin: 50px 20px 0;
+    border: 5px solid #305a47;
+    background-color: #ddeae4;
+    text-align: center;
+}
+
+form h2 {
+    text-align: left;
+    margin-left: 230px;
+}
+
+form {
+    margin: 50px 0;
+}
+
+input {
+    margin: 5px;
+}
+
+.legend {
+    margin-top: 40px;
+}
+
+#nom {
+    width: 500px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+#prenom {
+    width: 230px;
+    height: 30px;
+    float: left;
+    margin-left: 234px;
+    padding-left: 5px;
+}
+
+#email {
+    width: 230px;
+    height: 30px;
+    float: right;
+    margin-right: 234px;
+    padding-left: 5px;
+}
+
+textarea {
+    width: 500px;
+    margin: 5px;
+    padding: 5px 0 0 5px;
+}
+
+/*Mozilla*/
+/*#prenom {
+    width: 230px;
+    height: 30px;
+    float: left;
+    margin-left: 227px;
+    padding-left: 5px;
+}
+
+#email {
+    width: 230px;
+    height: 30px;
+    float: right;
+    margin-right: 227px;
+    padding-left: 5px;
+}
+
+textarea {
+    width: 515px;
+    margin: 5px;
+    padding: 5px 0 0 5px;
+}*/
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+input[type="submit"] {
+    width: 500px;
+    height: 35px;
+    color: #fff;
+    /*background-color: #ddeae4; Comme dans l'énoncé*/
+    background-color: #305a47; /*Comme sur le screen*/
+}
+
+input[type="submit"]:hover {
+    background-color: #109177;
+}
+
+/*footer*/
+footer nav {
+    padding: 6px;
+    background-color: #305a47;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+
+/*WARNING : le footer est en position fixe*/
+
+
+footer nav li {
+    margin: 10px;
+    display: inline;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+

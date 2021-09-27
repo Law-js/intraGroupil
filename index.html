@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr"> <!--lang="zxx" en Lorem...-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" media="screen">
+        <title>IntraGoupil</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <figure class="logo">
+                <!-- WARNING : div.logo plutôt que figure (ce n'est pas une image de contenu) + on encadre img avec un lien vers la page d'accueil-->   
+                    <img src="img/goupil.png" alt="Logo" width="159" height="">
+                </figure>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="#">Concours</a></li>
+                        <li><a href="#">Chat</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- WARNING : placer div.title-big dans le header -->
+            <div class="title-big">
+                <h1>IntraGoupil</h1> 
+                <h2>Chez Goupil tout se goupille bien</h2>
+            </div>
+            <main>
+            <!--Première partie-->
+            <div id="first">
+    
+<!--          WARNING : problème de structuration
+
+             schéma simplifier première rangée
+                        
+                        section (premier tiers du contenu principal,  
+                            div.colonne-left 
+                                1er article
+                                    img
+                                    p.meta
+                                        span.auteur
+                                        span.date
+                                    p
+                                    div.clear
+                                2e article (même forme)
+                            aside.colonne-droite 
+                                    1er div.rapport 
+                                        img
+                                        a  
+                                    2e div.rapport (même forme) 
+--> 
+
+                <div class="first-line">
+                    <div class="top image">
+                        <figure class="picture">
+                            <a href="#">
+                            <img src="img/jardin.jpg" alt="Montagne1" width="370" height="273">
+                            <figcaption></figcaption>
+                            <!-- WARNING : non, pas de figcaption -->
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="top text">
+                        <h1>Le jardin Goupil</h1>
+                        <p class="auteur"><span>Antoine Dellec</span>, <em>le 27 avril 2021</em></p>
+                        <p>Le jardin Goupil est en plein expansion. Des nouveaux aménagements sont prévus. En effet, les bancs sont en voies d'être installés prochainement, pour le plus grand plaisir des salariés mais aussi des enfants.</p>
+                    </div>
+                    <div class="top product">
+                        <figure>
+                            <img src="img/product-01.png" alt="Product" width="184" height="187" >
+                        </figure>
+                        <h4>Rapport annuel 2016</h4>
+                        <a href="#" title="Télécharger">Télécharger</a>
+                    </div>
+                </div>
+                <div class="second-line">
+                    <div class="second image">
+                        <figure class="picture">
+                            <a href="#">
+                            <img src="img/g6.jpg" alt="Montagne2" width="370" height="273">
+                            <figcaption></figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="second text">
+                        <h1>Lancement du G6</h1>
+                        <p class="auteur"><span>Didier Paltier Dellec</span>, <em>le 15 mars 1997</em></p>
+                        <p>Goupil fait peau neuve avec le lancement de sa nouvelle voiture. A vos appareils photo, que le meilleur cliché gagne.</p>
+                    </div>
+                    <div class="second product">
+                        <figure>
+                            <img src="img/product-01.png" alt="Product" width="184" height="187">
+                        </figure>
+                        <h4>Rapport annuel 2017</h4>
+                        <a href="#" title="Télécharger">Télécharger</a>
+                    </div>
+                </div>
+            </div>
+            <!--Fin première partie-->
+            <!--Deuxième partie-->
+                <div id="second"> <!--Supprimer-->
+                    <div class="left">
+                        <figure class="picture">
+                        <!-- WARNING : donc placer la class left sur figure et supprimer div.left -->
+                            <a href="#">
+                            <img src="img/saut.jpg" alt="Saut" width="480" height="480">
+                            <figcaption>
+                               <h3 class="title-margin">Le saut</h3>
+                               <p>La chute du sot sans son sceau</p>
+                                <button>
+                                     <!-- WARNING : non, c'est un lien, donc a -->Sauter</button>
+                            </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="right">
+                        <div class="vignette">
+                        <!-- WARNING : revoir la présentaion du code -->
+                            <img src="img/book-01.jpg" alt="Bois" width="120" height="157"><h4>Bois</h4><a href="#" title="Consulter">Consulter</a></div>
+                        <div class="vignette"><img src="img/book-02.jpg" alt="Sable" width="120" height="157"><h4>Sable</h4><a href="#" title="Consulter">Consulter</a></div>
+                        <div class="vignette"><img src="img/book-03.jpg" alt="Rivière" width="120" height="157"><h4>Rivière</h4><a href="#" title="Consulter">Consulter</a></div>
+                        <div class="vignette"><img src="img/book-04.jpg" alt="Pierre" width="120" height="157"><h4>Pierre</h4><a href="#" title="Consulter">Consulter</a></div>
+                    </div>
+                </div>
+                <!--Fin deuxième partie-->
+                <!--Section formulaire-->
+                <div id="formulaire">  
+                    <form action="page.php" method="post">
+                        <h2>Demande d'information</h2>
+
+                        <div>
+                            <input type="text" id="nom" placeholder="Nom" required>
+                        </div>
+                        <div>
+                            <input type="text" id="prenom" class="clearfix" placeholder="Prénom" required>
+                        </div>
+                        <div>
+                            <input type="email" id="email" class="clearfix" placeholder="Email" required>
+                     </div>
+                     <div>
+                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Un message ?"></textarea>
+                     </div>
+                     <div>
+                         <input type="submit" value="Envoyer">
+                     </div>
+                    </form>
+                </div>
+                <!--Fin section formulaire-->
+            </main>
+            <footer>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Applis mobile et tablette</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </body>
+</html>
